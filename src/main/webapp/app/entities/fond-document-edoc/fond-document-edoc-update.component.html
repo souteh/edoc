@@ -1,0 +1,50 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+            <h2 id="jhi-fond-document-edoc-heading" jhiTranslate="edocApp.fondDocument.home.createOrEditLabel">Create or edit a Fond Document</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!fondDocument.id">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id"
+                        [(ngModel)]="fondDocument.id" readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="edocApp.fondDocument.denominationAr" for="field_denominationAr">Denomination Ar</label>
+                    <input type="text" class="form-control" name="denominationAr" id="field_denominationAr"
+                        [(ngModel)]="fondDocument.denominationAr" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="edocApp.fondDocument.denominationFr" for="field_denominationFr">Denomination Fr</label>
+                    <input type="text" class="form-control" name="denominationFr" id="field_denominationFr"
+                        [(ngModel)]="fondDocument.denominationFr" pattern="[A-Z]+"/>
+                    <div [hidden]="!(editForm.controls.denominationFr?.dirty && editForm.controls.denominationFr?.invalid)">
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.controls.denominationFr?.errors?.pattern" jhiTranslate="entity.validation.pattern" translateValues="{ pattern: 'Denomination Fr' }">
+                            This field should follow pattern for "Denomination Fr".
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="edocApp.fondDocument.formatPj" for="field_formatPj">Format Pj</label>
+                    <input type="text" class="form-control" name="formatPj" id="field_formatPj"
+                        [(ngModel)]="fondDocument.formatPj" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="edocApp.fondDocument.reference" for="field_reference">Reference</label>
+                    <input type="text" class="form-control" name="reference" id="field_reference"
+                        [(ngModel)]="fondDocument.reference" />
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -38,6 +38,9 @@ public class CacheConfiguration {
             cm.createCache(ma.edoc.cr.domain.User.class.getName(), jcacheConfiguration);
             cm.createCache(ma.edoc.cr.domain.Authority.class.getName(), jcacheConfiguration);
             cm.createCache(ma.edoc.cr.domain.User.class.getName() + ".authorities", jcacheConfiguration);
+            cm.createCache(ma.edoc.cr.domain.FondDocument.class.getName(), jcacheConfiguration);
+            cm.createCache(ma.edoc.cr.domain.FondDocument.class.getName() + ".typesContenus", jcacheConfiguration);
+            cm.createCache(ma.edoc.cr.domain.TypeDeContenu.class.getName(), jcacheConfiguration);
             // jhipster-needle-ehcache-add-entry
         };
     }

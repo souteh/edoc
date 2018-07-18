@@ -1,0 +1,27 @@
+
+{
+    "edocApp": {
+        "typeDeContenu" : {
+            "home": {
+                "title": "TypeDeContenus",
+                "createLabel": "Créer un nouveau Type De Contenu",
+                "createOrEditLabel": "Créer ou éditer un Type De Contenu",
+                "search": "Recherche pour Type De Contenu"
+            },
+            "created": "Un nouveau Type De Contenu a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Type De Contenu avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Type De Contenu avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Type De Contenu {{ id }} ?"
+            },
+            "detail": {
+                "title": "Type De Contenu"
+            },
+            "denominationAr": "Denomination Ar",
+            "denominationFr": "Denomination Fr",
+            "reference": "Reference",
+            "code": "Code",
+            "fondDocument": "Fond Document"
+        }
+    }
+}
