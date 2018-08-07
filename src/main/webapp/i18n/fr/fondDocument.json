@@ -1,0 +1,27 @@
+
+{
+    "edocApp": {
+        "fondDocument" : {
+            "home": {
+                "title": "FondDocuments",
+                "createLabel": "Créer un nouveau Fond Document",
+                "createOrEditLabel": "Créer ou éditer un Fond Document",
+                "search": "Recherche pour Fond Document"
+            },
+            "created": "Un nouveau Fond Document a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Fond Document avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Fond Document avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Fond Document {{ id }} ?"
+            },
+            "detail": {
+                "title": "Fond Document"
+            },
+            "denominationAr": "Denomination Ar",
+            "denominationFr": "Denomination Fr",
+            "formatPj": "Format Pj",
+            "reference": "Reference",
+            "typesContenu": "Types Contenu"
+        }
+    }
+}
